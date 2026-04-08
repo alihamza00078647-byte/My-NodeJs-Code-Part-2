@@ -1,0 +1,41 @@
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="homePage.css">
+
+    <style>
+        .box{
+            height: 10rem;
+            width: 31rem;
+            /* background-color: rgb(255, 218, 173); */
+            border-radius: 10px;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(167, 16, 16);
+            margin: 1rem auto;
+            /* border: 1px solid black; */
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="box">
+        <h1 style="color: rgb(251, 125, 0);">Welcome To Favourite Book List</h1>
+        <h2>List Will be Appear here.</h2>
+    </div>
+    <ul class="show-home">
+        <li class="items">
+            <% registeredHomes.forEach(home => { %>
+            <li class="items">
+                <img src="<%= home.photoUrl %>" alt="Not found"/>
+                <h3><%= home.houseName %></h3>
+                <span><%= home.price %></span>
+                <span><%= home.location %></span>
+                <span><%= home.rating %></span>
+            </li>
+        <% }); %>
+        </li>
+    </ul>
+</body>
+</html>

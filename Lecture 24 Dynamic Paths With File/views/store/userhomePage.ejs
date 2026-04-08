@@ -1,0 +1,22 @@
+<%- include('../partials/head') %>
+
+<link rel="stylesheet" href="homePage.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <h1 style="text-align: center;">Welcome To Home PAGE</h1>
+    <ul class="show-home">
+        <% registeredHomes.forEach(home => { %>
+            <li class="items">
+                <img src="<%= home.photoUrl %>" alt="Not found"/>
+                <h3><%= home.houseName %></h3>
+                <span><%= home.price %></span>
+                <span><%= home.location %></span>
+                <span><%= home.rating %></span>
+                <%- include('../partials/favourite', {home : home}) %>
+                <a href="/home/<%= home.id %>" class="details">Details</a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
