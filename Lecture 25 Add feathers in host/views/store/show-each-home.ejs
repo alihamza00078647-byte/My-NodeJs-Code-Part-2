@@ -1,0 +1,72 @@
+<%- include('../partials/head') %>
+
+    <style>
+        .box{
+            height: 10rem;
+            width: 29rem;
+            /* background-color: rgb(255, 218, 173); */
+            border-radius: 10px;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(167, 16, 16);
+            margin: 1rem auto;
+        }
+
+        .details{
+            height: 43vh;
+            width: 90vw;
+            margin: 0.1rem auto;
+            border: 1px solid black;
+            display: flex;
+            /* padding: 10px; */
+        } .details li{
+            display: flex;
+            list-style: none;
+            height: 100%;
+            width: 30%;
+        } li img{
+            height: 100%;
+            width: 100%;
+        }
+        .others{
+            flex-direction: column;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* border: ; */
+        }
+        h3{
+            width: 90%;
+            border-bottom: 1px solid gainsboro;
+        }
+        #go-to-fav{ 
+            padding: 10px; border-radius: 6px; 
+            background-color: rgb(141, 255, 27); border: none; 
+            margin: 6rem auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="box">
+        <h1>My Selected House</h1>
+        <h2 style="color: rgb(251, 125, 0);">Details of Selected Home PAGE</h2>
+    </div>
+    <ul class="details">
+        <li>
+            <img src="<%=home.photoUrl %>">
+        </li>
+        <li class="others">
+            <h3>House Name : <%= home.houseName%></h3>
+            <h3>Price : <%= home.price%></h3>
+            <h3>Location : <%= home.location%></h3>
+            <h3>Rating : <%= home.rating%></h3>
+        </li>
+        <%- include('../partials/favourite') %>
+    </ul>
+</body>
+</html>
