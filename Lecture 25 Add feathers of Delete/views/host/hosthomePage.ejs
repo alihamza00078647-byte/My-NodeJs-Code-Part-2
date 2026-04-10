@@ -1,0 +1,25 @@
+<%- include('../partials/head') %>
+
+<link rel="stylesheet" href="homePage.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <h1 style="text-align: center;">Host Home List Page</h1>
+    <ul class="show-home">
+        <% registeredHomes.forEach(home => { %>
+            <li class="items">
+                <img src="<%= home.photoUrl %>"/>
+                <h3><%= home.houseName %></h3>
+                <span><%= home.price %></span>
+                <span><%= home.location %></span>
+                <span><%= home.rating %></span>
+                <a href="/host/edit-home/<%= home.id%>/?editing=true" class="book" style="background-color: rgb(143, 255, 143);">Edit</a>
+                
+                <form action="/host/delete-home/<%= home.id%>" method="post">
+                    <button type="submit" class="book" style="background-color: rgb(205, 152, 255);">delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
