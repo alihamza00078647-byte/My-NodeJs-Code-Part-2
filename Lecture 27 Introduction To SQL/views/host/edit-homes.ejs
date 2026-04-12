@@ -1,0 +1,20 @@
+<%- include('../partials/head') %>
+
+<head>
+    <body>
+        <%- include('../partials/nav') %>
+        
+        <form class="flex gap-6 flex-col p-2 items-center" action="/<%= editing ? 'edit-homes' : 'addhomes' %>" method="post">
+            
+            <input type="hidden" name="id" value="<%= editing ? home.id : '' %>">
+
+            <input class="border-amber-500 border-2 rounded-xl p-2 w-xs" placeholder="House Name" type="text" name="houseName" value="<%= editing ? home.houseName : '' %>">
+            <input class="border-amber-500 border-2 rounded-xl p-2 w-xs" placeholder="Enter Price" type="text" name="price" value="<%= editing ? home.price : '' %>">
+            <input class="border-amber-500 border-2 rounded-xl p-2 w-xs" placeholder="Enter Location" type="text" name="location" value="<%= editing ? home.location : '' %>">
+            <input class="border-amber-500 border-2 rounded-xl p-2 w-xs" placeholder="Enter Rating" type="text" name="rating" value="<%= editing ? home.rating : '' %>">
+            <input class="border-amber-500 border-2 rounded-xl p-2 w-xs" placeholder="Enter photoUrl" type="text" name="photoUrl" value="<%= editing ? home.photoUrl : '' %>">
+            <textarea class="border-amber-500 border-2 rounded-xl p-2 w-xs" placeholder="Enter Description" type="text" name="description"><%= editing ? home.description : '' %></textarea>
+            <input class="bg-blue-500 rounded-xl border-0 p-2 cursor-pointer text-teal-50" type="submit">
+        </form>
+    </body>
+</head>
