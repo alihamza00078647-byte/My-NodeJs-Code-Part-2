@@ -1,0 +1,43 @@
+<%- include('../partials/head') %>
+
+
+<link rel="stylesheet" href="/css/eachhomedetails.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <h2 style="text-align: center; margin-top: 0.5rem; color : #23B5D3;"> <%=Home.houseName %> Home Details</h2>
+
+    <div class="details-container">
+    <div class="details-card">
+        <div class="details-image">
+            <img src="<%= Home.photoUrl %>" alt="<%= Home.houseName %>">
+        </div>
+
+        <div class="details-content">
+            <nav class="breadcrumb">Home / Listings / <%= Home.houseName %></nav>
+            
+            <h1><%= Home.houseName %></h1>
+            <p class="details-location">📍 <%= Home.location %></p>
+            
+            <hr>
+
+            <div class="details-meta">
+                <span class="details-price">$<%= Home.price %></span>
+                <span class="details-rating">⭐ <%= Home.rating %> / 5.0</span>
+            </div>
+
+            <div class="details-description">
+                <h3>About this property</h3>
+                <p><%= Home.description %></p>
+            </div>
+
+            <div class="action-buttons">
+                <a href="/favourite/<%=Home._id%>" class="btn-primary">favourite</a>
+                <button class="btn-secondary">Contact Host</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

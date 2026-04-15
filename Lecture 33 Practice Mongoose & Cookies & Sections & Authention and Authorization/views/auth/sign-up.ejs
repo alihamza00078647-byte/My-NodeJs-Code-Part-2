@@ -1,0 +1,51 @@
+<%- include('../partials/head') %>
+
+<head>
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/css/errors.css">
+</head>
+
+    <body>
+        <%- include('../partials/nav') %>
+        
+        <div class="signup-container">
+            <form action="/signup" method="post" class="signup-form">
+                <h2>Create Account</h2>
+
+                <%- include('../partials/errors') %>
+                
+                <div class="input-group">
+                    <input type="text" name="firstName" placeholder="First Name"
+                    value="<%= oldInput.firstName ? oldInput.firstName : '' %>" required>
+
+                    <input type="text" name="lastName" placeholder="Last Name"
+                    value="<%= oldInput.lastName ? oldInput.lastName : '' %>" required>
+                </div>
+
+                <input type="email" name="email" placeholder="Email Address"
+                value="<%= oldInput.email ? oldInput.email : '' %>" required>
+        
+
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="ConfirmPassword" placeholder="Confirm Password" required>
+                
+
+                <div class="role-selection">
+                    <p>I want to join as a:</p>
+                    <label><input type="radio" name="userType" value="user" checked> User</label>
+                    <label><input type="radio" name="userType" value="host"> Host</label>
+                </div>
+
+                <label class="terms">
+                    <input type="checkbox" name="terms" required>
+                    Agree to Terms & Conditions
+                </label>
+                
+                <button type="submit" class="signup-btn">Sign Up</button>
+                
+                <div class="login-link">
+                    Already have an account? <a href="/login">Login</a>
+                </div>
+            </form>
+        </div>
+    </body>

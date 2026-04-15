@@ -1,0 +1,34 @@
+<%- include('../partials/head') %>
+
+<link rel="stylesheet" href="/css/addhomes.css">
+<head>
+    <body>
+        <%- include('../partials/nav') %>
+        <h1 style="text-align: center;"><%= editing ? 'Edit Homes' : 'Add Homes' %></h1>
+
+
+        <form action="/host/<%= editing ? 'edit-homes' : 'addhomes' %>" method="post" class="input-parent">
+
+            <input type="hidden" name="_id" value="<%= editing? Home._id : ''%>">
+
+            <input type="text" name="houseName" placeholder="Enter houseName"
+            value="<%= editing ? Home.houseName : '' %>">
+
+            <input type="text" name="price" placeholder="Enter price"
+            value="<%= editing ? Home.price : ''%>">
+
+            <input type="text" name="location" placeholder="Enter Location"
+            value="<%= editing ? Home.location : ''%>">
+
+            <input type="text" name="rating" placeholder="Enter Rating" 
+            value="<%= editing ? Home.rating : ''%>">
+
+            <input type="text" name="photoUrl" placeholder="Paste Photo URL"
+            value="<%= editing ? Home.photoUrl : ''%>">
+
+            <textarea name="description" placeholder="Description"><%= editing ? Home.description : ''%></textarea>
+
+            <input type="submit" style="cursor: pointer;">
+        </form>
+    </body>
+</head>

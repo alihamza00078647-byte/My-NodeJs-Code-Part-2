@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "connect-mongodb-session": "^5.0.0",
+    "ejs": "^3.0.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "express-validator": "^7.3.1",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.2.2",
+    "mysql2": "^3.17.5",
+    "nodemon": "^3.1.14"
+  },
+  "name": "new-file-operations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "@tailwindcss/postcss": "^4.2.0",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1"
+  }
+}

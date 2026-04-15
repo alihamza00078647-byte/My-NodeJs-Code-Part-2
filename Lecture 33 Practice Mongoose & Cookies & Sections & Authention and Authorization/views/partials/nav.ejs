@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/nav.css">
+
+<nav class="navbar">
+    <a href="/" class="logo">airbnb</a>
+
+    <div class="nav-links">
+        <% if (isLoggedIn) { %>
+            <a href="/home">Home</a>
+            <a href="/bookings">Bookings</a>
+            <a href="/favourite">Favourite</a>
+            <a href="/host/addhomes">Add Home</a>
+            <a href="/host/hosthomepage">Host Homepage</a>
+            <% } %>
+
+                <% if (!isLoggedIn) { %>
+                    <a href="/login" class="login-btn">Login</a>
+                    <a href="/signup">Signup</a>
+
+                    <% } else { %>
+                        <form action="/logout" method="post" class="logout-form">
+                            <button type="submit" class="logout-btn">Logout</button>
+                        </form>
+                        <% } %>
+    </div>
+</nav>

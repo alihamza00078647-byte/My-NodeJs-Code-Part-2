@@ -1,0 +1,55 @@
+/* Container ko align karne ke liye */
+.navbar {
+    background-color: #ff5a5f; /* Airbnb jaisa red-orange color */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; /* Logo ek taraf, links doosri taraf */
+    align-items: center; /* Vertical alignment center */
+    font-family: Arial, sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center; /* Isse form aur links ek hi line mein rahenge */
+    gap: 20px; /* Links ke darmiyan fasla */
+}
+
+/* Links ki styling */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+/* Logo specific style */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Form ko block banne se rokne ke liye */
+.logout-form {
+    display: inline; 
+    margin: 0;
+}
+
+/* Button ko pyara banane ke liye */
+.logout-btn {
+    background-color: white;
+    color: #ff5a5f;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #f0f0f0;
+}
