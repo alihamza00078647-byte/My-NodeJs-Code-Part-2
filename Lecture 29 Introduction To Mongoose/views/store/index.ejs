@@ -1,0 +1,24 @@
+<%- include('../partials/head') %>
+
+    </head>
+
+    <body>
+        <%- include('../partials/nav') %>
+        <h1 class="text-4xl text-center m-1">Welcome To airbnb</h1>
+            <ul class="min-h-96 border-2 border-amber-400 flex gap-5 flex-wrap p-6 m-2">
+                <% registeredHomes.forEach(Home => { %>
+                <li class="h-72 w-xs border-zinc-500 flex flex-wrap gap-1 rounded-xl bg-gray-200">
+
+                    <img class="h-[60%] w-full object-cover rounded-t-xl" src="<%= Home.photoUrl%>">
+                    <p class="text-xs font-bold block text-center"> House Name : <%= Home.houseName%></p>
+                    <p class="text-xs font-bold block text-center"> Price : <%= Home.price %></p>
+                    <p class="text-xs font-bold block text-center"> Location : <%= Home.location %></p>
+                    <p class="text-xs font-bold block text-center"> Rating : <%= Home.rating %></p>
+                    <p class="text-xs font-bold block text-center"> Description : <%= Home.description %></p>
+                    <button class="bg-cyan-400 rounded-xl text-amber-50 p-1.5 h-10 cursor-pointer">Book</button>
+                </li>
+            <% });%>
+            </ul>
+    </body>
+
+    </html>
