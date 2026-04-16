@@ -1,0 +1,150 @@
+/* Previous Base Styles */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    border: 1.5px solid #e1e4e8;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    outline: none;
+}
+
+/* --- New Radio Button UI --- */
+.radio-group {
+    margin: 10px 0;
+}
+
+.radio-group p {
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.radio-options {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-options label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1.5px solid #e1e4e8;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Hide the default radio circle slightly but keep it functional */
+.radio-options input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Highlight the whole label when selected */
+.radio-options label:has(input:checked) {
+    border-color: #007bff;
+    background-color: #f0f7ff;
+    color: #007bff;
+    font-weight: 500;
+}
+
+/* --- Checkbox & Submit --- */
+.terms-label {
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.AlreadyLogin{
+    color: rgb(255, 124, 124);
+    text-decoration: underline;
+}
+
+
+
+
+/* Container ka main box */
+.error-container {
+    background-color: #fde8e8; /* Light red background */
+    border-left: 5px solid #e02424; /* Dark red left border */
+    color: #9b1c1c; /* Dark red text */
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* "Errors" text ki styling */
+.error-title {
+    display: block;
+    font-size: 1.1em;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Error messages ki list */
+.error-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Har ek message ki styling */
+.error-item {
+    font-size: 0.95em;
+    display: list-item; /* List bullet point ki tarah dikhega */
+    margin-left: 20px;
+}

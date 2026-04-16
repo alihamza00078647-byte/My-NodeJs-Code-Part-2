@@ -1,0 +1,54 @@
+<%- include('../partials/head') %>
+
+<link rel="stylesheet" href="/css/signup.css">
+
+<head>
+    <body>
+        <%- include('../partials/nav') %>
+        <h1 class="text-2xl text-center font-bold text-teal-500 m-2 ">Welcome To Login Page</h1>
+
+    <form action="/signup" method="post">
+
+        <%- include('../partials/errors') %>
+
+
+        <input type="text" name="firstName" placeholder="First Name" value="<%= oldInput.firstName ? oldInput.firstName : '' %>" required>
+
+        <input type="text" name="lastName" placeholder="Last Name" value="<%= oldInput.lastName ? oldInput.lastName : '' %>" required>
+
+        <input type="email" name="email" placeholder="Email Address" value="<%= oldInput.email ? oldInput.email : '' %>" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+
+        <div class="radio-group">
+            <p>Register as:</p>
+            <div class="radio-options">
+                <label>
+
+                    <input type="radio" name="userType" value="user" >
+                    <span>User</span>
+                </label>
+                <label>
+
+                    <input type="radio" name="userType" value="host" >
+                    <span>Host</span>
+                </label>
+            </div>
+        </div>
+
+        <label class="terms-label">
+            <input type="checkbox" name="terms" required>
+            Agree to Terms & Conditions
+        </label>
+
+        <input type="submit" value="Create Account">
+
+        <div style="text-align: center;">
+            Already Have an Account?
+            <a class="AlreadyLogin" href="/login">Log in</a>
+        </div>
+    </form>
+    </body>
+</head>

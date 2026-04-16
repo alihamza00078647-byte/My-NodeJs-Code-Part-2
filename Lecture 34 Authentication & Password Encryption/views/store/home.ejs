@@ -1,0 +1,27 @@
+<%- include('../partials/head') %>
+
+
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <h1 class="text-4xl text-center m-1">Welcome To Home page</h1>
+            <ul class="min-h-96 border-amber-400 flex gap-18 flex-wrap p-6 m-2">
+            <% registeredHomes.forEach(Home => { %>
+                <li class="h-72 w-xs border-zinc-500 flex flex-wrap gap-1 rounded-xl bg-gray-200">
+
+                    <img class="h-[60%] w-full object-cover rounded-t-xl" src="<%= Home.photoUrl%>">
+                    <p class="text-xs font-bold block text-center"> House Name : <%= Home.houseName%></p>
+                    <p class="text-xs font-bold block text-center"> Price : <%= Home.price %></p>
+                    <p class="text-xs font-bold block text-center"> Location : <%= Home.location %></p>
+                    <p class="text-xs font-bold block text-center"> Rating : <%= Home.rating %></p>
+                    <p class="text-xs font-bold block text-center"> Description : <%= Home.description %></p>
+                    <form action="/favourite" method="post">
+                        <input type="hidden" name="id" id="<%=Home._id%>">
+                        <button type="submit" class="bg-emerald-300 rounded-2xl p-2">Favourites</button>
+                    </form>
+                    <a href="/homedetails/<%=Home._id%>" class="bg-indigo-400 p-1 flex justify-center items-center rounded-2xl text-white">details</a>
+                </li>
+            <% });%>
+        </ul>
+</body>
+</html>

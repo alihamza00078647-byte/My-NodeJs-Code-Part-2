@@ -1,0 +1,38 @@
+<%- include('../partials/head') %>
+
+<link rel="stylesheet" href="/css/login.css">
+
+<body>
+
+<%- include('../partials/nav') %>
+
+<h1 class="login-title">Welcome To Login Page</h1>
+
+<form action="/login" method="post" class="login-form">
+    
+    <%- include('../partials/errors') %>
+
+
+    <input 
+    class="login-input"
+    placeholder="Enter your email"
+    type="email"
+    name="email"
+    value="<%= oldInput.email ? oldInput.email : '' %>"
+    required>
+
+    <input
+    class="login-input"
+    placeholder="Password"
+    type="password"
+    name="password"
+    required>
+
+    <input
+    type="submit"
+    value="Login"
+    class="login-button">
+
+</form>
+
+</body>

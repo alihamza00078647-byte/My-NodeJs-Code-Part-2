@@ -1,0 +1,14 @@
+
+
+<% if (typeof errors !=='undefined' && errors && errors.length> 0) { %>
+    <div class="error-container" role="alert">
+        <strong class="error-title">Errors:</strong>
+        <div class="error-list">
+            <% errors.forEach(err=> { %>
+                <span class="error-item">
+                    <%= err %>
+                </span>
+                <% }); %>
+        </div>
+    </div>
+<% } %>
