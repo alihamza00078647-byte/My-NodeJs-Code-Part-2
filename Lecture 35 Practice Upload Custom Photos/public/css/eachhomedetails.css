@@ -1,0 +1,158 @@
+/* Background and Container */
+.details-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* The Main Card */
+.details-card {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* Image Section (50% width) */
+.details-image {
+    flex: 1;
+    min-width: 400px; /* Forces stack if screen is too small */
+    height: 500px;
+}
+
+.details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Section (50% width) */
+.details-content {
+    flex: 1;
+    padding: 40px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+.breadcrumb {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    color: #2d3436;
+}
+
+.details-location {
+    font-size: 1.1rem;
+    color: #636e72;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Price and Rating Row */
+.details-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.details-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #27ae60;
+}
+
+.details-rating {
+    font-weight: 600;
+    background: #f1f2f6;
+    padding: 8px 15px;
+    border-radius: 50px;
+}
+
+/* Description Text */
+.details-description h3 {
+    margin-bottom: 10px;
+    color: #2d3436;
+}
+
+.details-description p {
+    line-height: 1.8;
+    color: #4b4b4b;
+}
+
+/* Buttons */
+.action-buttons {
+    margin-top: auto; /* Pushes buttons to the bottom */
+    display: flex;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: #ff385c; /* Modern accent color */
+    color: white;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+.btn-primary:hover {
+    color: white;
+    background-color: #e31c5f;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border: 2px solid #2d3436;
+    color: #2d3436;
+    flex: 1;
+}
+
+.btn-secondary:hover {
+    background-color: #f7f7f7;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .details-image {
+        min-width: 100%;
+        height: 300px;
+    }
+    .details-content {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
