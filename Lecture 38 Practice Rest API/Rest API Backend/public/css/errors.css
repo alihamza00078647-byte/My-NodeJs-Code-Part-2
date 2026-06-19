@@ -1,0 +1,53 @@
+/* Error Container ki main styling */
+.error-container {
+    background-color: #fef2f2; /* Bohat halka red background */
+    border-left: 5px solid #ef4444; /* Side par dark red line */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* "Errors:" title ki styling */
+.error-title {
+    color: #991b1b; /* Dark red text */
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* List container jo items ko hold karega */
+.error-list {
+    display: flex;
+    flex-direction: column; /* Aik ke niche ek errors aayenge */
+    gap: 5px;
+}
+
+/* Individual error item */
+.error-item {
+    color: #b91c1c; /* Red color for messages */
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+/* Har error ke shuru mein aik chota bullet point ya dot */
+.error-item::before {
+    content: "•";
+    color: #ef4444;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Animation: Taake error achanak se aaye toh smooth lage */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.error-container {
+    animation: fadeIn 0.4s ease-out;
+}
